@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="febaa9e4-005d-428f-a730-8b81afc2e236" name="Default Changelist" comment="//conncetion file to mongoDB altas">
-      <change afterPath="$PROJECT_DIR$/Mongotest/models/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mongotest/routes/userRoutes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mongotest/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mongotest/models/collections.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mongotest/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Mongotest/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mongotest/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Mongotest/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mongotest/test/connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/Mongotest/test/connection.js" afterDir="false" />
+    <list default="true" id="febaa9e4-005d-428f-a730-8b81afc2e236" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Mongotest/routes/userRoutes.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -45,7 +38,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Mongotest/test/connection.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="266">
@@ -67,19 +60,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Mongotest/models/user.js">
+        <entry file="file://$PROJECT_DIR$/Mongotest/models/collections.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Mongotest/routes/userRoutes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -137,18 +121,6 @@
               <item name="CMPE195" type="b2602c69:ProjectViewProjectNode" />
               <item name="CMPE195" type="462c0819:PsiDirectoryNode" />
               <item name="Mongotest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CMPE195" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CMPE195" type="462c0819:PsiDirectoryNode" />
-              <item name="Mongotest" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CMPE195" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CMPE195" type="462c0819:PsiDirectoryNode" />
-              <item name="Mongotest" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CMPE195" type="b2602c69:ProjectViewProjectNode" />
@@ -220,7 +192,7 @@
       <workItem from="1564269487703" duration="9078000" />
       <workItem from="1564357509585" duration="3468000" />
       <workItem from="1564446907216" duration="1220000" />
-      <workItem from="1564790786619" duration="3375000" />
+      <workItem from="1564790786619" duration="3681000" />
     </task>
     <task id="LOCAL-00001" summary="//1111">
       <created>1563405380490</created>
@@ -257,22 +229,36 @@
       <option name="project" value="LOCAL" />
       <updated>1564291199458</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="//conncetion file to mongoDB altas">
+      <created>1564797896973</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1564797896973</updated>
+    </task>
+    <task id="LOCAL-00007" summary="//conncetion file to mongoDB altas">
+      <created>1564798090673</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1564798090673</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20230000" />
+    <option name="totallyTimeSpent" value="20536000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2489339" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2489339" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Messages" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.71908313" weight="0.90021694" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -332,10 +318,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mongotest/models/user.js">
+    <entry file="file://$PROJECT_DIR$/Mongotest/routes/userRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mongotest/models/collections.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -343,13 +336,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mongotest/routes/userRoutes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
         </state>
       </provider>
     </entry>
