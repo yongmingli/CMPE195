@@ -1,22 +1,15 @@
-const mongoose = require('mongoose');
+var mongoose = require('mongoose');
 
 
 // Connect to db before tests run
 // before(function(done){
 
     // Connect to mongodb
-    mongoose.connect('mongodb://localhost/CleanS',{useNewUrlParser: true});
-    mongoose.connection.once('open', function(){
-        console.log('Connection has been made, now make fireworks...');
-        // done();
-    }).on('error', function(error){
-        console.log('Connection error:', error);
-    });
-
-// });
-// beforeEach(function(done){
-    //drop the collection
-    // mongoose.connection.collections.mariochars.drop(function(){
-    //     // done()
-    // });
-// });
+mongoose.connect('mongodb+srv://IsMondayTMR:CMPE195@cmpe195db-lki36.mongodb.net/test?retryWrites=true&w=majority', {
+    useNewUrlParser: true },function(err){
+    if (err){
+        console.log(err);
+        return;
+    }
+    console.log("connect to db!");
+});
