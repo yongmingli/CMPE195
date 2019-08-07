@@ -1,3 +1,7 @@
+##House service platform<br>
+    This project is our senior project. We are going to develop a platform to list House 
+    services near users,and Users can browse and order service in a secure and convenient way.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +70,12 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+### MongoDB
+
+More information on https://www.mongodb.com
+
+### Free MongoDB server
+ 
+https://www.mongodb.com/cloud/atlas
