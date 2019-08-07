@@ -21,7 +21,7 @@ const dbURIaActual = process.env.MONGODB_URI;
 
 // view engine setup
 app.set('components', path.join(__dirname, 'components'));
-//app.set('view engine', 'pug');
+app.set('view engine', 'js');
 
 app.use(logger('dev'));
 app.use(express.json());
