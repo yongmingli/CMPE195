@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9410cbd7-4de2-439d-84b0-1f470334a1e6" name="Default Changelist" comment="folder update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="9410cbd7-4de2-439d-84b0-1f470334a1e6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1565078433761</updated>
       <workItem from="1565078435014" duration="594000" />
-      <workItem from="1565079693279" duration="3940000" />
+      <workItem from="1565079693279" duration="3268000" />
     </task>
     <task id="LOCAL-00001" summary="new version of react app">
       <created>1565079774476</created>
