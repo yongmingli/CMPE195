@@ -9,5 +9,7 @@ const UserSchema = new mongoose.Schema({
     }
 });
 
+
+
 const Collections = mongoose.model("Collections", UserSchema);
 module.exports = Collections;
