@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9410cbd7-4de2-439d-84b0-1f470334a1e6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,6 +67,7 @@
       <updated>1565078433761</updated>
       <workItem from="1565078435014" duration="594000" />
       <workItem from="1565079693279" duration="3268000" />
+      <workItem from="1565193137899" duration="180000" />
     </task>
     <task id="LOCAL-00001" summary="new version of react app">
       <created>1565079774476</created>
@@ -117,6 +120,7 @@
     <MESSAGE value="new version of react app" />
     <MESSAGE value="few changes" />
     <MESSAGE value="folder update" />
-    <option name="LAST_COMMIT_MESSAGE" value="folder update" />
+    <MESSAGE value="error correct" />
+    <option name="LAST_COMMIT_MESSAGE" value="error correct" />
   </component>
 </project>

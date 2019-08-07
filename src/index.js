@@ -17,7 +17,7 @@ mongoose.connect(dbURI);
 const dbURIaActual = process.env.MONGODB_URI;
 
 // Schedule all bill pay on server startup
-Billpay.scheduleAllBillpay().then(res => {console.log('Scheduling all bill pay')}).catch(err => {console.log(err)});
+//Billpay.scheduleAllBillpay().then(res => {console.log('Scheduling all bill pay')}).catch(err => {console.log(err)});
 
 // view engine setup
 app.set('components', path.join(__dirname, 'components'));

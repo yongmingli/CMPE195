@@ -13,9 +13,9 @@ var passport = require('passport');
 //initPassport();
 
 /* Load other routes */
-router.use('/signup', require('./signup.js'));
-router.use('/login', require('./login.js'));
-router.use('/logout', require('./logout.js'));
+//router.use('/signup', require('./signup.js'));
+//router.use('/login', require('./login.js'));
+//router.use('/logout', require('./logout.js'));
 
 /* Routes */
 router.get('/', function(req, res, next) {
