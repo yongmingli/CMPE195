@@ -6,7 +6,7 @@
 
 /* Dependencies */
 const MongoClient = require('mongodb').MongoClient;
-const constants = require('./config/db_config');
+const constants = require('../config/db_config');
 
 // Refers to the Mongo DB
 const URI = `mongodb+srv://${constants.DB_USER}:${constants.DB_PASSWORD}@${constants.DB_HOST}`;
