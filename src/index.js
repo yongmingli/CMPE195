@@ -4,12 +4,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var passport = require('passport');
-//var indexRouter = require('./routes/index');
+var indexRouter = require('../routes/index');
 var session = require('express-session');
 var flash = require('connect-flash');
 var app = express();
 var mongoose = require('mongoose');
-//var dbConstants = require('./config/db_config');
+var dbConstants = require('./config/db_config');
 //const Billpay = require('./models/billpay');
 
 const dbURI = `mongodb+srv://${dbConstants.DB_USER}:${dbConstants.DB_PASSWORD}@${dbConstants.DB_HOST}/${dbConstants.DB_NAME}`;
@@ -20,8 +20,8 @@ const dbURIaActual = process.env.MONGODB_URI;
 Billpay.scheduleAllBillpay().then(res => {console.log('Scheduling all bill pay')}).catch(err => {console.log(err)});
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.set('components', path.join(__dirname, 'components'));
+//app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(express.json());

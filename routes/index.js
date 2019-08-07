@@ -19,7 +19,7 @@ router.use('/logout', require('./logout.js'));
 
 /* Routes */
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Spartan Financial Group (SFG) Banking' });
+    res.render('index', { title: 'CMPE 195 Project' });
 });
 
 /* Export Module */
