@@ -18,6 +18,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+master
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
@@ -84,6 +85,7 @@
       </file>
     </leaf>
   </component>
+ master
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -177,6 +179,12 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/components" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -208,6 +216,7 @@
       <created>1563404991274</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+master
       <updated>1563404991274</updated>
       <workItem from="1563404992619" duration="670000" />
       <workItem from="1563406093564" duration="96000" />
@@ -285,6 +294,41 @@
       <updated>1564798276822</updated>
     </task>
     <option name="localTasksCounter" value="10" />
+
+      <updated>1565078433761</updated>
+      <workItem from="1565078435014" duration="594000" />
+      <workItem from="1565079693279" duration="3268000" />
+    </task>
+    <task id="LOCAL-00001" summary="new version of react app">
+      <created>1565079774476</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1565079774476</updated>
+    </task>
+    <task id="LOCAL-00002" summary="few changes">
+      <created>1565137907016</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1565137907016</updated>
+    </task>
+    <task id="LOCAL-00003" summary="folder update">
+      <created>1565138367462</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1565138367462</updated>
+    </task>
+    <task id="LOCAL-00004" summary="folder update">
+      <created>1565138664524</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1565138664524</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+master
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -318,6 +362,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+ master
   <component name="VcsManagerConfiguration">
     <MESSAGE value="//1111" />
     <MESSAGE value="testing again" />
@@ -386,5 +431,25 @@
         </state>
       </provider>
     </entry>
+
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+master
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="new version of react app" />
+    <MESSAGE value="few changes" />
+    <MESSAGE value="folder update" />
+    <option name="LAST_COMMIT_MESSAGE" value="folder update" />
   </component>
 </project>
