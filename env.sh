@@ -1,1 +1,1 @@
-export MONGODB_URI=ljkhjghfdghfjkl
+export MONGODB_URI=

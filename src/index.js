@@ -20,8 +20,10 @@ const dbURIaActual = process.env.MONGODB_URI;
 //Billpay.scheduleAllBillpay().then(res => {console.log('Scheduling all bill pay')}).catch(err => {console.log(err)});
 
 // view engine setup
-app.set('components', path.join(__dirname, 'components'));
-app.set('view engine', 'js');
+//app.set('views', path.join(__dirname, 'views'));
+//app.set('view engine', 'html');
+
+app.use(express.static(__dirname + '/views'));
 
 app.use(logger('dev'));
 app.use(express.json());
