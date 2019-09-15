@@ -63,11 +63,11 @@ class Register extends Component {
     // console.log("props",this.props);
     var userhintText,userLabel;
     if(this.props.role === "student"){
-      userhintText="Enter your User Id";
+      userhintText="Enter your Email Address";
       userLabel="Email Address";
     }
     else{
-      userhintText="Enter your Manager Id";
+      userhintText="Enter your Email Address";
       userLabel="Email Address";
     }
     return (
