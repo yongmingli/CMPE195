@@ -1,8 +1,24 @@
 import React, { Component } from "react";
 import { ReactiveBase, DataSearch, RatingsFilter,RangeSlider } from "@appbaseio/reactivesearch";
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import Loginscreen from './Loginscreen'
 import "./App.css";
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      loginPage:[],
+      uploadScreen:[]
+    }
+  }
+  componentWillMount(){
+    var loginPage =[];
+    loginPage.push(<Loginscreen parentContext={this}/>);
+    this.setState({
+                  loginPage:loginPage
+                    })
+  }
   render() {
     return (
       <div className="container-fluid">
@@ -51,8 +67,11 @@ class App extends Component {
                 />
               </div>
             </div>
+            <div className="App">
+        {this.state.loginPage}
+        {this.state.uploadScreen}
+      </div>
           </nav>
-
 			<div className="box">
                 <RangeSlider
                   componentId="RangeSliderSensor"
@@ -111,5 +130,8 @@ class App extends Component {
     );
   }
 }
+const style = {
+  margin: 15,
+};
 
 export default App;
