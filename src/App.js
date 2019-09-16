@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { ReactiveBase, DataSearch, RatingsFilter,RangeSlider } from "@appbaseio/reactivesearch";
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import Loginscreen from './Loginscreen'
+import Loginscreen from './components/Login/Loginscreen'
 import "./App.css";
 
 class App extends Component {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../../App.css';
 /*
 Screen:LoginScreen
 Loginscreen is the main screen which the user is shown on first visit to page and after
