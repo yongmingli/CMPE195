@@ -1,3 +1,62 @@
+
+/* .toggle-button{*/
+ /* position:absolute;
+  top:0;
+   right:0;
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 300px;*/
+
+ /* background: #4887ef; 
+  margin-right: 25px;
+  padding: 7px 15px;
+  border-radius: 3px; 
+  font-weight: bold;
+  float: right;
+  }
+*/
+
+/*.mainImage{
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  clear: both;
+  padding-top: 112px;
+  padding-bottom: 20px;
+
+}
+
+.navbar {
+
+  width: 100%;
+  float: right;
+}
+
+.logo-container {
+  width: 30%;
+}
+
+.reserve-logo {
+  margin-left: 0px !important;
+  margin-top: 3px;
+}
+
+
+.search-container {
+    /*width: 50%;*/
+  /*  text-align:center;
+    height:auto;
+}*/
+
+/*.search-bar {
+  border: 2px solid #86ddf8;
+  border-radius: 3px;
+  text-align:center;*/
+/*  width: 450px;
+  line-height: 32px;
+  padding: 20px 10px;*/
+/*}*/
+
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -40,6 +99,7 @@
 
 .Login {
     padding: 60px 0;
+    
   }
 
   .Login form {
