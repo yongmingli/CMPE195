@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { ReactiveBase, DataSearch, RatingsFilter,RangeSlider } from "@appbaseio/reactivesearch";
-import injectTapEventPlugin from 'react-tap-event-plugin';
-import RaisedButton from 'material-ui/RaisedButton';
+// import { ReactiveBase, DataSearch, RatingsFilter,RangeSlider } from "@appbaseio/reactivesearch";
+// import injectTapEventPlugin from 'react-tap-event-plugin';
+// import RaisedButton from 'material-ui/RaisedButton';
 //import Loginscreen from './components/Login/Loginscreen'
 import Login from './components/Login/Login.js'
-import Register from './components/Login/Register.js'
+// import Register from './components/Login/Register.js'
 import "./App.css";
 
 class App extends Component {
@@ -30,7 +30,7 @@ class App extends Component {
     );
   }
 }
-const style = {
-  margin: 15,
-};
+// const style = {
+//   margin: 15,
+// };
 export default App;

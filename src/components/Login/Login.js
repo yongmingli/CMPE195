@@ -4,7 +4,7 @@ import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import axios from 'axios';
-import Register from './Register'
+// import Register from './Register'
 class Login extends Component {
 constructor(props){
   super(props);
@@ -16,7 +16,7 @@ constructor(props){
 
  handleClick(event){
  var apiBaseUrl = "http://localhost:4000/api/";
- var self = this;
+//  var self = this;
  var payload={
  "email":this.state.username,
  "password":this.state.password
@@ -24,10 +24,10 @@ constructor(props){
  axios.post(apiBaseUrl+'login', payload)
  .then(function (response) {
  console.log(response);
- if(response.data.code == 200){
+ if(response.data.code === 200){
  console.log("Login successfull");
 }
- else if(response.data.code == 204){
+ else if(response.data.code === 204){
  console.log("Username password do not match");
  alert("username password do not match")
  }
@@ -40,9 +40,9 @@ constructor(props){
  console.log(error);
  });
  }
- handleClick(register){
+//  handleClick(register){
 
- }
+//  }
 render() {
     return (
       <div>
