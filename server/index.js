@@ -5,6 +5,8 @@
 // import bodyParser from 'body-parser';
 // import logger from  'morgan';
 // import Data from './data';
+require('./server');
+
 const express = require('express');
 const dbConstants = require('../config/db_config')
 var cors = require('cors');

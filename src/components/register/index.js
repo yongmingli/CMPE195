@@ -1,10 +1,10 @@
-import Login from './Login';
-import React, { Component } from 'react';
+import Login from '../login';
+import React, { Component } from './node_modules/react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
-import axios from 'axios';
+import axios from './node_modules/axios';
 class Register extends Component {
   constructor(props){
     super(props);
@@ -16,7 +16,7 @@ class Register extends Component {
     }
   }
   handleClick(event){
-    var apiBaseUrl = "http://localhost:4000/api/";
+    var apiBaseUrl = "http://localhost:3000/api/";
     console.log("values",this.state.first_name,this.state.last_name,this.state.email,this.state.password);
     //To be done:check for empty values before hitting submit
     var self = this;
@@ -29,7 +29,7 @@ class Register extends Component {
     axios.post(apiBaseUrl+'/register', payload)
    .then(function (response) {
      console.log(response);
-     if(response.data.code == 200){
+     if(response.data.code === 200){
       //  console.log("registration successfull");
        var loginscreen=[];
        loginscreen.push(<Login parentContext={this}/>);

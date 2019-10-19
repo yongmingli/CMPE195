@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 ##House service platform<br>
     This project is our senior project. We are going to develop a platform to list House 
     services near users,and Users can browse and order service in a secure and convenient way.
 
-=======
->>>>>>> pr/6
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

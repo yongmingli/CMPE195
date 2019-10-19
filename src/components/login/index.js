@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from './node_modules/react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
-import axios from 'axios';
+import axios from './node_modules/axios';
 // import Register from './Register'
 class Login extends Component {
 constructor(props){
@@ -15,14 +15,13 @@ constructor(props){
  }
 
  handleClick(event){
- var apiBaseUrl = "http://localhost:4000/api/";
+ var apiBaseUrl = "http://localhost:3000/api/";
 //  var self = this;
  var payload={
  "email":this.state.username,
  "password":this.state.password
  }
- axios.post(apiBaseUrl+'login', payload)
- .then(function (response) {
+ axios.post(apiBaseUrl+'login', payload).then(function (response) {
  console.log(response);
  if(response.data.code === 200){
  console.log("Login successfull");
@@ -43,6 +42,7 @@ constructor(props){
 //  handleClick(register){
 
 //  }
+
 render() {
     return (
       <div>
@@ -72,10 +72,6 @@ render() {
     );
   }
 }
-
-
-
-
 
 const style = {
  margin: 15,
