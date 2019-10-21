@@ -1,5 +1,5 @@
-# CMPE131-F18-prj
-CMPE 131 Fall 2018 Group Project
+# CMPE 195 Poject
+CMPE 195 Project
 
 ## CONTENTS
 1. Project Structure
@@ -37,7 +37,7 @@ views/
 ### Frontend
 - Standard HTML, CSS, JS
 - Bootstrap
-- PUG Templating Engine
+- HTML Templating Engine
 
 ### Backend
 - Node.js     - The server
@@ -77,18 +77,5 @@ Starting up the Node Server allows you to run your own copy of the project. To v
 ## 6. Deploying Application Online (to Heroku)
 The `master` branch is always deployed online on Heroku. Whenever a commit is made onto `master`, Heroku will update and deploy the latest changes.
 
-The online deployment can be found here: https://cmpe131-f18-prj.herokuapp.com
-
 ## 7. TODO
 - Describe workflow for making changes more clearly
-
-Backend work proceedure: 
-1. Open the GitHub webpage and application 
-2. Update to current master version: GitHub app --> click on the current branch (your name) change to master --> pull to origin --> change back to your branch --> branch menu (toolbar) --> Merge into current branch --> select master and merge into it 
-3. Open terminal: cd GitHub/CMPE131-F18-prj/  --->  npm install   --->  nodemon start 
-**/ as long as you have this open it will show changes on your web browser. changes are local /**
-4. Open your text editor --> open file --> github --> CMPE131-F18-prj --> model (or whereever you need to go) --> access the sheet you need
-**/ any changes you make and save are tracked by GitHub. changes are still local /**
-5. To see changes in your local web browser: http://localhost:3000/
-6. If you're satisfied with your changes: GH app —> click changes tab —> commit to "your_name" —> push to origin (the online version) now everyone can see it!
-7. Terminal (to quit): control + c

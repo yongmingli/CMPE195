@@ -26,7 +26,7 @@ router.post('/', function(req, res, next) {
   // Check data from the form
   if (!isValidInput(firstName, lastName, email, password, confirmPassword)) {
     req.flash('error', 'All fields are required.');
-    return res.redirect('signup');
+    return res.redirect('/signup');
   }
 
   (async function() {
@@ -35,7 +35,7 @@ router.post('/', function(req, res, next) {
     
     if (!user) {
       req.flash('error', 'User already exists with the given email');
-      return res.redirect('signup');
+      return res.redirect('/signup');
     }
     
     // Create a checking account for the new user

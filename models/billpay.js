@@ -23,7 +23,6 @@ var billpaySchema = mongoose.Schema({
 
 /* Methods */
 
-
 /* Statics */
 
 /**
