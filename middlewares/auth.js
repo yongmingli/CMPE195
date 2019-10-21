@@ -36,7 +36,7 @@ function accountBelongsToUser(req, res, next) {
 
   Account.belongsToUser(req.params.accountId, req.user._id).then((belongsToUser) => {
     if (!belongsToUser)
-      return res.redirect('/dashboard');
+      return res.redirect('/');
     
     // Account does belong to user, so pass control to next controller.
     next();

@@ -5,6 +5,6 @@ module.exports = {
   DB_USER: 'IsMondayTMR',
   DB_PASSWORD: 'CMPE195',
   DB_HOST: 'cmpe195db-lki36.mongodb.net/test?retryWrites=true&w=majority',
-  DB_NAME: 'CMPE195',
+  DB_NAME: 'Service',
   COLLECTION_USERS: 'User'
 };

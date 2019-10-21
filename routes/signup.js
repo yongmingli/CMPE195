@@ -31,6 +31,7 @@ router.post('/', function(req, res, next) {
 
   (async function() {
     const user = await User.createUser(firstName, lastName, email, password, null, null);
+    // const user = await User.createUser(email, password);
     
     if (!user) {
       req.flash('error', 'User already exists with the given email');
