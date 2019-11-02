@@ -22,7 +22,7 @@ initPassport();
 // router.use('/find-atm', require('./find-atm'));
 router.use('/login', require('./login'));
 router.use('/signup', require('./signup'));
-router.use('/dashboard', require('./dashboard'));
+router.use('/customer', require('./customer'));
 router.use('/business', require('./business'));
 /* Routes */
 router.get('/', function(req, res, next) {
