@@ -62,6 +62,7 @@ Nodemon is a development tool that automatically reloads changes into the Node.j
 
 ### FIRST TIME RUN
 *** IMPORTANT ***
+
 After pull down the codes, open a terminal/commandline, and navigate to project directory:
 Execute `npm install`
 
