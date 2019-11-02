@@ -60,6 +60,11 @@ Nodemon is a development tool that automatically reloads changes into the Node.j
 2. Navigate to project directory
 3. Execute `npm install -g nodemon`
 
+### FIRST TIME RUN
+*** IMPORTANT ***
+After pull down the codes, open a terminal/commandline, and navigate to project directory:
+Execute `npm install`
+
 ## 4. Starting Node Server
 1. Open terminal/commandline.
 2. Navigate to project directory
@@ -68,5 +73,5 @@ Nodemon is a development tool that automatically reloads changes into the Node.j
 ### Where Can I View the Webpage?
 Starting up the Node Server allows you to run your own copy of the project. To view the website, head to `http://localhost:3000` in your web browser.
 
-## 5. Deploying Application Online (to Heroku)
+## 5. Deploying Application Online (to Heroku) [UNAVAILABLE, NOT yet applied]
 The `master` branch is always deployed online on Heroku. Whenever a commit is made onto `master`, Heroku will update and deploy the latest changes.
