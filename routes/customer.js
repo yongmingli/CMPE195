@@ -5,7 +5,7 @@ var passport = require('passport');
  
  /* Routes */
  router.get('/', function(req, res, next) {
-   res.render('dashboard.html', {error: req.flash('error')[0]});
+   res.render('customer.html', {error: req.flash('error')[0]});
  });
  
  router.post('/', passport.authenticate('local', {
