@@ -1,5 +1,5 @@
-# CMPE131-F18-prj
-CMPE 131 Fall 2018 Group Project
+# CMPE 195 project
+CMPE 195 Project
 
 ## CONTENTS
 1. Project Structure
