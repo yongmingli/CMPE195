@@ -13,13 +13,6 @@ var initPassport = require('../config/passport_config').initPassport;
 initPassport();
 
 /* Load other routes */
-// router.use('/sign-in', require('./sign-in'));
-// router.use('/sign-up', require('./sign-up'));
-// router.use('/sign-out', require('./sign-out'));
-// router.use('/dashboard', require('./dashboard'));
-// router.use('/dashboard/settings', require('./settings'));
-// router.use('/dashboard/account', require('./account'));
-// router.use('/find-atm', require('./find-atm'));
 router.use('/login', require('./login'));
 router.use('/signup', require('./signup'));
 router.use('/customer', require('./customer'));
