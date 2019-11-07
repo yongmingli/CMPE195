@@ -14,7 +14,7 @@
     "dist": "^0.1.2",
     "ejs": "^2.7.1",
     "express": "~4.16.0",
-    "express-session": "^1.15.6",
+    "express-session": "^1.17.0",
     "glob": "^7.1.4",
     "gulp": "^4.0.2",
     "handlebars": "^4.4.5",
