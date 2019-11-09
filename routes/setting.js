@@ -4,12 +4,12 @@
  
  /* Routes */
  router.get('/', function(req, res, next) {
-   res.render('profile.pug', {error: req.flash('error')[0]});
+   res.render('setting.pug', {error: req.flash('error')[0]});
  });
  
  router.post('/', passport.authenticate('local', {
    successRedirect: '/',
-   failureRedirect: '/profile',
+   failureRedirect: '/setting',
    failureFlash: true
  }));
  

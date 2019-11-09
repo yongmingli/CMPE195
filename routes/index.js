@@ -17,7 +17,8 @@ router.use('/login', require('./login'));
 router.use('/signup', require('./signup'));
 router.use('/customer', require('./customer'));
 router.use('/business', require('./business'));
-router.use('/profile', require('./profile'));
+router.use('/setting', require('./setting'));
+router.use('/auth_business', require('./auth_business'));
 /* Routes */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'City Service Project' });
