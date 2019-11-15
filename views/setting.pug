@@ -100,28 +100,15 @@ html
                 br
                 br
                 br
-                
-       
-                
+
                 h5(class="text-center") Dear customer, you can close your enter account here.
                 form(method="post" action='settings/close-user')
                     div(class="text-center") #{error}
                     fieldset(class="form-group") 
-                        if creditAccount
-                            if creditAccount.balance == 0 
-                                p Please enter your password to comfirm this action:<br>
-                                div(class="form-group")
-                                    <input type="password" name = "password">
-                                    <input type="submit" value="Submit">
-                            else
-                                p *Dear customer, you have to pay your credit card fully before closing your account.
-                        else
-                            p Click here to close your enter banking account at SFG. 
-                            p Please enter your password to comfirm this action:<br>
-                            div(class="form-group")
-                                <input type="password" name = "password">
-                                <input type="submit" value="Submit">
-
+                      p Please enter your password to comfirm this action:<br>
+                      div(class="form-group")
+                          <input type="password" name = "password">
+                          <input type="submit" value="Submit">
                 <br><br>
                 
               
