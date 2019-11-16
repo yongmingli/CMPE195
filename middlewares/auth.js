@@ -15,6 +15,7 @@ var Account = require('../models/account');
  * @param {Response} res - Represents the server's response.
  * @param {NextFunction} next - The next controller in the chain.
  */
+
 function isAuthenticated(req, res, next) {
   if (!req.isAuthenticated()) {
     return res.redirect('/');

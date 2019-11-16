@@ -19,9 +19,15 @@ router.use('/customer', require('./customer'));
 router.use('/business', require('./business'));
 router.use('/setting', require('./setting'));
 router.use('/auth_business', require('./auth_business'));
+router.use('/logout', require('./logout'));
+
 /* Routes */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'City Service Project' });
+  var isAuthenticated = false;
+  if (req.isAuthenticated())
+    isAuthenticated = true;
+
+  res.render('index', {isAuthenticated: isAuthenticated});
 });
 
 console.log('\nProject Start!!!\n');
