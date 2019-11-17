@@ -37,6 +37,9 @@
             <div class="mb-5">
               <h2>Welcome back</h2>
             </div>
+            <div class="text-center">
+              {{error}}
+            </div>
             <form method="post" action="/login">
               <div class="form-group">
                 <label for="email" class="form-label"> Email Address</label>
@@ -49,7 +52,7 @@
               <!-- Submit-->
               <button class="btn btn-lg btn-block btn-primary" type="submit" value="Sign In">Sign in</button>
               <hr class="my-4">
-              <p class="text-center"><small class="text-muted text-center">Don't have an account yet? <a href="/signup">Sign Up                </a></small></p>
+              <p class="text-center"><small class="text-muted text-center">Don't have an account yet? <a href="/signup">Sign Up</a></small></p>
             </form><a href="/" class="close-absolute mr-md-5 mr-xl-6 pt-5"> 
               <svg class="svg-icon w-3rem h-3rem">
                 <use xlink:href="#close-1"> </use>
