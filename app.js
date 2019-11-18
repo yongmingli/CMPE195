@@ -13,7 +13,7 @@ var dbConstants = require('./config/db_config');
 var engines = require('consolidate');
 // const Billpay = require('./models/billpay');
 
-const dbURI = `mongodb+srv://${dbConstants.DB_USER}:${dbConstants.DB_PASSWORD}@${dbConstants.DB_HOST}/${dbConstants.DB_NAME}`;
+const dbURI = `mongodb+srv://${dbConstants.DB_USER}:${dbConstants.DB_PASSWORD}@${dbConstants.DB_HOST}`;
 mongoose.connect(dbURI);
 
 // Schedule all bill pay on server startup
