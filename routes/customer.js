@@ -46,10 +46,12 @@ var Account = require('../models/account');
     {
       if(accounts[i].type == 'cleaning'){
         services.cleaning = accounts[i];
+        console.log('Cleaning Found!!!'); // For TESTING
         console.log(services.cleaning); // For TESTING
       }
       else if(accounts[i].type == 'moving'){
         services.moving = accounts[i];
+        console.log('Moving Found!!!'); // For TESTING
         console.log(services.moving); // For TESTING
       }
       else{

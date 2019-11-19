@@ -38,16 +38,19 @@ nav.navbar.navbar-dark.fixed-top.bg-dark.flex-md-nowrap.p-0.shadow
     nav.col-md-2.d-none.d-md-block.bg-light.sidebar
       .sidebar-sticky
         ul.nav.flex-column
+          li.nav-item
+              br
+              a( class="btn btn-block" href='/') Back
+              br
           if !moving &&!cleaning
             li.nav-item
                 br
                 a( class="btn btn-primary btn-block" href='/auth_business') Open your business account 
                 br
-                br
           if moving
             li.nav-item
                 br
-                a(class="btn btn-primary btn-block" href=`/bueiness/${moving._id}`) My moving business
+                a(class="btn btn-primary btn-block" href=`/business/${moving._id}`) My moving business
                 br
           if cleaning
             li.nav-item
@@ -84,87 +87,3 @@ nav.navbar.navbar-dark.fixed-top.bg-dark.flex-md-nowrap.p-0.shadow
               td consectetur
               td adipiscing
               td elit
-            tr
-              td 1,003
-              td Integer
-              td nec
-              td odio
-              td Praesent
-            tr
-              td 1,003
-              td libero
-              td Sed
-              td cursus
-              td ante
-            tr
-              td 1,004
-              td dapibus
-              td diam
-              td Sed
-              td nisi
-            tr
-              td 1,005
-              td Nulla
-              td quis
-              td sem
-              td at
-            tr
-              td 1,006
-              td nibh
-              td elementum
-              td imperdiet
-              td Duis
-            tr
-              td 1,007
-              td sagittis
-              td ipsum
-              td Praesent
-              td mauris
-            tr
-              td 1,008
-              td Fusce
-              td nec
-              td tellus
-              td sed
-            tr
-              td 1,009
-              td augue
-              td semper
-              td porta
-              td Mauris
-            tr
-              td 1,010
-              td massa
-              td Vestibulum
-              td lacinia
-              td arcu
-            tr
-              td 1,011
-              td eget
-              td nulla
-              td Class
-              td aptent
-            tr
-              td 1,012
-              td taciti
-              td sociosqu
-              td ad
-              td litora
-            tr
-              td 1,013
-              td torquent
-              td per
-              td conubia
-              td nostra
-            tr
-              td 1,014
-              td per
-              td inceptos
-              td himenaeos
-              td Curabitur
-            tr
-              td 1,015
-              td sodales
-              td ligula
-              td in
-              td libero
