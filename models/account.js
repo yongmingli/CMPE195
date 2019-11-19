@@ -9,7 +9,6 @@ const ObjectID = require('mongodb').ObjectID;
 const randomstring = require('randomstring');
 const uniqueValidator = require('mongoose-unique-validator');
 const User = require('./user');
-const Transaction = require('./transaction');
 
 /* Constants */
 const MAX_RETRIES = 5;
@@ -51,7 +50,11 @@ accountSchema.statics.createAccount = async function(user_ID, type,  company_nam
     var newAccount = this({
         _id: randomstring.generate({length: 12, charset: 'numeric'}),
         user_ID: user_ID,
-
+        type: type,
+        company_name: company_name,
+        address: address,
+        city: city,
+        check_Bussiness : check_Bussiness,
     });
 
     return await newAccount.save();
@@ -63,11 +66,29 @@ accountSchema.statics.createAccount = async function(user_ID, type,  company_nam
  * @param {ObjectID} user_ID
  * @returns {Promise}
  */
-accountSchema.statics.create_Bussiness = async function(user_ID) {
+// var accountSchema = mongoose.Schema({
+//     _id: String,
+//     user_ID: String,
+//     type: String,
+//     company_name: String,
+//     address: String,
+//     city: String,
+//     check_Bussiness : Boolean,
+// });
+accountSchema.statics.create_Cleaning = async function(user_ID, type, company_name, address, city) {
 
     var promise = Promise.reject();
     for(var i = 0; i < MAX_RETRIES; i++)
-        promise = promise.catch(() => {return this.createAccount(user_ID, 'Bussiness', null, null, null, null, true)});
+        promise = promise.catch(() => {return this.createAccount(user_ID, type, company_name, address, city, true)});
+
+    return await promise.then((res) => {return res}).catch((res) => {return Promise.reject(res)});
+}
+
+accountSchema.statics.create_Moving = async function(user_ID, type, company_name, address, city) {
+
+    var promise = Promise.reject();
+    for(var i = 0; i < MAX_RETRIES; i++)
+        promise = promise.catch(() => {return this.createAccount(user_ID, type, company_name, address, city, true)});
 
     return await promise.then((res) => {return res}).catch((res) => {return Promise.reject(res)});
 }
@@ -104,7 +125,9 @@ accountSchema.statics.getAccount = async function(account_ID) {
 accountSchema.statics.getAccounts = async function(user_ID) {
     return await this.find({user_ID: user_ID});
 }
-
+accountSchema.statics.get_company_by_city = async function(city) {
+    return await this.find({city: city});
+}
 /**
  * Checks whether an account belongs to a user.
  * @function belongsToUser

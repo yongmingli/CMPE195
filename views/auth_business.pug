@@ -43,8 +43,9 @@ html
     p CityService
     h1.h2.mb-5
       | Business Application 
-    a(class="btn btn-block" href="/customer") Back to account
-    form(method="post" action='/business')
+    a(class="btn btn-block" href="/customer")  Back to account
+    form(method="post" action='/auth_business')
+      div(class="text-center") #{error}
       .row.form-block
         .col-lg-4
           h4 Basic
@@ -53,14 +54,14 @@ html
         .col-lg-7.ml-auto
           .form-group
           .form-group
-            label.form-label(for='form_name') Company name
-            input#form_name.form-control(name='name')
+            label(for='company_name') Company name
+            input(type="company_name" class="company_name" id="company_name" name="company_name")
           .form-group
-            label.form-label(for='form_type') Service type
+            label(for='type') Service type
             div(class="form-group")
-                    select(name='categ')
-                        option(value='volvo') Cleaning
-                        option(value='saab') Moving
+                    select(name='type' type="type" class="type" id="type")
+                        option(value='cleaning') Cleaning
+                        option(value='moving') Moving
                     br
       .row.form-block
         .col-lg-4
@@ -82,24 +83,11 @@ html
         .col-lg-7.ml-auto            
           // Street
           .form-group
-            label.form-label(for='form_street') Street Address
-            input#form_street.form-control(name='name')
-          // City + State
-          .row
-            .col-md-6
-              .form-group
-                label.form-label(for='form_city') City
-                input#form_city.form-control(name='name')
-            .col-md-6
-              .form-group
-                label.form-label(for='form_state') State
-                input#form_state.form-control(name='name')
-          // ZIP Code
-          .row
-            .col-md-6
-              .form-group
-                label.form-label(for='form_zip') ZIP Code
-                input#form_zip.form-control(name='name')
+            label(for='address') Street Address
+            input(type="address" class="form-control" id="address" name="address")
+          .form-group
+            label(for='city') City
+            input(type="city" class="form-control" id="city" name="city")
       .row.form-block.flex-column.flex-sm-row
         .col.text-center.text-sm-left
         .col.text-center.text-sm-right

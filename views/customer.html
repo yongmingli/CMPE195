@@ -45,13 +45,30 @@
     <nav class="col-md-2 d-none d-md-block bg-light sidebar">
       <div class="sidebar-sticky">
         <ul class="nav flex-column">
+          {% if !moving && !cleaning %}
           <li class="nav-item">
             <a class="nav-link active" href="/auth_business">
               <span data-feather="home"></span>
               Open your business account <span class="sr-only">(current)</span>
             </a>
           </li>
-
+          {% endif %}
+          {% if moving %}
+          <li class="nav-item">
+            <a href=`/bueiness/${moving._id}`>
+              <span data-feather="home"></span>
+              Go to my moving business account! <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          {% endif %}
+          {% if cleaning %}
+          <li class="nav-item">
+            <a href=`/business/${cleaning._id}`>
+              <span data-feather="home"></span>
+              Go to my cleaning business account! <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          {% endif %}
         </ul>
 
         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">

@@ -18,6 +18,7 @@ router.use('/signup', require('./signup'));
 router.use('/customer', require('./customer'));
 router.use('/business', require('./business'));
 router.use('/setting', require('./setting'));
+router.use('/setting_business', require('./setting_business'));
 router.use('/auth_business', require('./auth_business'));
 router.use('/logout', require('./logout'));
 

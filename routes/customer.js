@@ -31,11 +31,32 @@ var Account = require('../models/account');
  
  /* Routes */
  router.get('/', auth.isAuthenticated, function(req, res) {
+  var services = {
+    cleaning: null,
+    moving: null,
+    error: req.flash('error')[0]
+  }
+
   Account.find({user_ID: req.user._id}, function(err, accounts){
     if(err){
       console.log(err);
     }
-    res.render('customer.html', {error: req.flash('error')[0]});
+
+    for(var i = 0; i < accounts.length; i++)
+    {
+      if(accounts[i].type == 'cleaning'){
+        services.cleaning = accounts[i];
+        console.log(services.cleaning); // For TESTING
+      }
+      else if(accounts[i].type == 'moving'){
+        services.moving = accounts[i];
+        console.log(services.moving); // For TESTING
+      }
+      else{
+        console.log('No Account detacted!');
+      }
+    }
+    res.render('customer.pug', services);
   })
 });
  

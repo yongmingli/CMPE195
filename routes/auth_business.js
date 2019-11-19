@@ -14,66 +14,49 @@
   })
 });
 
-// router.get('/new-service/:serviceType', auth.isAuthenticated, function(req, res, next) {
-//   const serviceType = req.params.serviceType;
+router.post('/', auth.isAuthenticated, function(req, res, next) {
+  const serviceType = req.body['type'];
+  const company_name = req.body['company_name'];
+  const city = req.body['city'];
+  const address = req.body['address'];
+  var account;
 
-//   (async function() {
-//     var account;
-    
-//     switch (serviceType) {
-//       case 'cleaning':
-//         // First check if the user already has the account
-//         account = await Account.findOne({user_ID: req.user._id, type: 'cleaning'});
-//         if (account !== null)
-//           return null;
+  (async function() {
+    var account;
+
+    switch (serviceType) {
+      case 'cleaning':
+        // First check if the user already has the account
+        account =  await Account.findOne({user_ID: req.user._id, type: 'cleaning'});
+        if (account !== null){
+          req.flash('error', 'You have already registerd cleaning service!');
+          return null;
+        }
+        account = await Account.create_Cleaning (req.user._id, 'cleaning', company_name, address, city)
+        break;
           
-//           account = await Account.createCleaning(req.user._id);
-//           break;
-          
-//       case 'moving':
-//         // First check if the user already has the account
-//         account = await Account.findOne({user_ID: req.user._id, type: 'moving'});
-//         if (account !== null)
-//           return null;
-        
-//         account = await Account.createMoving(req.user._id, 2000, null);
-//         break;
+      case 'moving':
+        // First check if the user already has the account
+        account = await Account.findOne({user_ID: req.user._id, type: 'moving'});
+        if (account !== null){
+          req.flash('error', 'You have already registerd moving service!');
+          return null;
+        }
+        account = await Account.create_Moving(req.user._id, 'moving', company_name, address, city);
+        break;
 
-//       default:
-//         return null;
-//         break;
-//     }
+      default:
+        return;
+        break;
+    }
+    return account;
+  })().then(account => {
+    if (account != null)
+      res.redirect(`/bueiness/${account._id}`);
+    else
+      res.redirect('/auth_business');
+  }).catch(err => next(err));
+});
 
-//     return account;
-//   })().then(account => {
-//     if (account != null)
-//       res.redirect(`../account/${account._id}`);
-
-//     else
-//       res.redirect(`../`);
-//   }).catch(err => next(err));
-// });
-
-
-// router.post('/apply', auth.isAuthenticated, function(req, res, next) {  
-//   const imgBack = (req.body['img-back'] !== undefined) ? req.body['img-back'] : '';
-//   const imgFront = (req.body['img-front'] !== undefined) ? req.body['img-front'] : '';
-
-//   (async () => {
-
-//     if (imgBack.length === 0 || imgFront.length === 0)
-//         return req.flash('error', 'Check images are required.');
-        
-//       if (imgBack === imgFront)
-//         return req.flash('error', 'Check images provided cannot be the same.');
-
-//     return ;
-
-//   })().then(response => {
-//     res.redirect('deposit');
-
-//   }).catch(err => next(err));
-// });
- 
  /* Export Module */
  module.exports = router;
