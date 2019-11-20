@@ -7,13 +7,13 @@
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 const Account = require('./account');
-const ObjectID = require('mongodb').ObjectID;
-
+const Order_cleaning = require('./order_cleaning');
+const Order_moving = require('./order_moving');
+const User = require('./user');
 const SALTROUNDS = 10;
 
 /* Schema */
-var order_cleaning_Schema = mongoose.Schema({
-    _id: String,
+var order_User_Schema = mongoose.Schema({
     user_ID: String,
     account_ID: String,
     ordername: String,
@@ -32,11 +32,7 @@ var order_cleaning_Schema = mongoose.Schema({
  * @returns {Promise} Promise object that represents the response.
  */
 /* Methods */
-order_cleaning_Schema.methods.Edit = async function(ordername, ordertype,price) {
-    this.ordername = ordername;
-    this.price = price;
-    return this.save();
-}
+
 
 /* Statics */
 /**
@@ -48,15 +44,14 @@ order_cleaning_Schema.methods.Edit = async function(ordername, ordertype,price) 
  * @param {number} order_price
  * @returns {Promise} - Promise object that represents the response.
  */
-order_cleaning_Schema.statics.createCleaningOrder = async function(user_ID, account_ID, order_name, order_type, order_company, order_price) {
+order_User_Schema.statics.addOrder = async function(user_ID, account_ID, order_name, order_type, order_company, order_price) {
 
     var responseObj = {
         success : null,
         message : null
     };
-    // Create a new user
+
     var newOrder = this({
-        _id: randomstring.generate({length: 24, charset: 'numeric'}),
         user_ID: user_ID,
         account_ID: account_ID,
         ordername: order_name,
@@ -66,27 +61,6 @@ order_cleaning_Schema.statics.createCleaningOrder = async function(user_ID, acco
         company_Lowercase: order_company.toLocaleLowerCase(),
         ordername_Lowercase: order_name.toLocaleLowerCase(),
     });
-    const orderS = await newOrder.save();
-    const account = await Account.getAccount(account_ID);
-
-    if ((account.type !== 'Cleaning')){
-        responseObj.success = false;
-        responseObj.message = 'this account cannot create cleaining order';
-        return responseObj;
-    }
-
-    var order = await this.find({company: newOrder.company_Lowercase},{ordername:newOrder.ordername_Lowercase},{order_type:newOrder.ordertype});
-
-    if (order){
-        responseObj.success = false;
-        responseObj.message = 'the order exist, you can edit it!';
-        return responseObj;
-    }else {
-        responseObj.success = true;
-        responseObj.message = 'the order is created';
-        await new order.save();
-    }
-    responseObj.success = true;
     return await newOrder.save();
 }
 // /**
@@ -104,7 +78,7 @@ order_cleaning_Schema.statics.createCleaningOrder = async function(user_ID, acco
  * @param {string} order_type
  * @returns {order} - Found order object.
  */
-order_cleaning_Schema.statics.get_order_by_type_many = async function(order_type) {
+order_Moving_Schema.statics.get_order_by_type_many = async function(order_type) {
     return await this.find({ordertype: order_type});
 }
 /**
@@ -114,7 +88,7 @@ order_cleaning_Schema.statics.get_order_by_type_many = async function(order_type
  * * @param {string} order_name
  * @returns {order} - Found order object.
  */
-order_cleaning_Schema.statics.get_order_by_name_one = async function(order_type,order_name) {
+order_Moving_Schema.statics.get_order_by_name_one = async function(order_type,order_name) {
     return await this.findone({ordertype: order_type}, {ordername_Lowercase: order_name.toLocaleLowerCase()});
 }
 /**
@@ -124,8 +98,8 @@ order_cleaning_Schema.statics.get_order_by_name_one = async function(order_type,
  * * @param {string} order_name
  * @returns {order} - Found order object.
  */
-order_cleaning_Schema.statics.get_order_by_name_many = async function(order_type,order_name) {
+order_Moving_Schema.statics.get_order_by_name_many = async function(order_type,order_name) {
     return await this.find({ordertype: order_type}, {ordername_Lowercase: order_name.toLocaleLowerCase()});
 }
 
-module.exports = mongoose.model('Order_Cleaning', order_cleaning_Schema, 'Order_Cleaning');
+module.exports = mongoose.model('Order_Moving', order_Moving_Schema, 'Order_Moving');

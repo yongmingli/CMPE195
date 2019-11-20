@@ -30,7 +30,10 @@ accountSchema.plugin(uniqueValidator);
 
 /* Methods */
 
-
+accountSchema.methods.Edit_address = async function(ad) {
+    this.address = ad;
+    return this.save();
+}
 
 
 /* Statics */
@@ -54,6 +57,7 @@ accountSchema.statics.createAccount = async function(user_ID, type,  company_nam
         company_name: company_name,
         address: address,
         city: city,
+        city_lowercase: city.toLocaleLowerCase(),
         check_Bussiness : check_Bussiness,
     });
 
@@ -126,7 +130,8 @@ accountSchema.statics.getAccounts = async function(user_ID) {
     return await this.find({user_ID: user_ID});
 }
 accountSchema.statics.get_company_by_city = async function(city) {
-    return await this.find({city: city});
+    var city_lower = city.toLocaleLowerCase()
+    return await this.find({city_lowercase: city_lower});
 }
 /**
  * Checks whether an account belongs to a user.

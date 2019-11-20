@@ -21,6 +21,7 @@ router.use('/setting', require('./setting'));
 router.use('/setting_business', require('./setting_business'));
 router.use('/auth_business', require('./auth_business'));
 router.use('/logout', require('./logout'));
+router.use('/result', require('./result'));
 
 /* Routes */
 router.get('/', function(req, res, next) {
@@ -29,6 +30,21 @@ router.get('/', function(req, res, next) {
     isAuthenticated = true;
 
   res.render('index', {isAuthenticated: isAuthenticated});
+});
+
+router.post('/', function(req, res, next){
+  const type = req.body['type'];
+  // const type = 'fuck';
+  const city = req.body['city'];
+  // const city = 'San Jose';
+  console.log('type:', type); 
+  console.log('city:', city);
+
+  if (city == null) {
+    req.flash('error', 'Cannot transfer to the same account');
+    return res.redirect('/');  
+  }
+  return res.redirect(`/result/${city}/${type}`);   
 });
 
 console.log('\nProject Start!!!\n');

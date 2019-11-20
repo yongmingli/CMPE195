@@ -19,6 +19,7 @@ var order_User_Schema = mongoose.Schema({
     ordername: String,
     ordertype: String,
     company: String,
+    Order_status: String,
     price: Number,
     company_Lowercase: String,
     ordername_Lowercase: String,
@@ -33,7 +34,10 @@ var order_User_Schema = mongoose.Schema({
  */
 /* Methods */
 
-
+order_User_Schema.methods.Edit_status = async function(status) {
+    this.Order_status = status;
+    return this.save();
+}
 /* Statics */
 /**
  * Creates a new order in the DB.
@@ -44,7 +48,7 @@ var order_User_Schema = mongoose.Schema({
  * @param {number} order_price
  * @returns {Promise} - Promise object that represents the response.
  */
-order_User_Schema.statics.addOrder = async function(user_ID, account_ID, order_name, order_type, order_company, order_price) {
+order_User_Schema.statics.addOrder = async function(user_ID, account_ID, order_name, order_type, order_company, order_status,order_price) {
 
     var responseObj = {
         success : null,
@@ -58,6 +62,7 @@ order_User_Schema.statics.addOrder = async function(user_ID, account_ID, order_n
         ordertype: order_type,
         company: order_company,
         price: order_price,
+        Order_status: order_status,
         company_Lowercase: order_company.toLocaleLowerCase(),
         ordername_Lowercase: order_name.toLocaleLowerCase(),
     });
@@ -78,7 +83,7 @@ order_User_Schema.statics.addOrder = async function(user_ID, account_ID, order_n
  * @param {string} order_type
  * @returns {order} - Found order object.
  */
-order_Moving_Schema.statics.get_order_by_type_many = async function(order_type) {
+order_User_Schema.statics.get_order_by_type_many = async function(order_type) {
     return await this.find({ordertype: order_type});
 }
 /**
@@ -88,7 +93,7 @@ order_Moving_Schema.statics.get_order_by_type_many = async function(order_type) 
  * * @param {string} order_name
  * @returns {order} - Found order object.
  */
-order_Moving_Schema.statics.get_order_by_name_one = async function(order_type,order_name) {
+order_User_Schema.statics.get_order_by_name_one = async function(order_type,order_name) {
     return await this.findone({ordertype: order_type}, {ordername_Lowercase: order_name.toLocaleLowerCase()});
 }
 /**
@@ -98,8 +103,8 @@ order_Moving_Schema.statics.get_order_by_name_one = async function(order_type,or
  * * @param {string} order_name
  * @returns {order} - Found order object.
  */
-order_Moving_Schema.statics.get_order_by_name_many = async function(order_type,order_name) {
+order_User_Schema.statics.get_order_by_name_many = async function(order_type,order_name) {
     return await this.find({ordertype: order_type}, {ordername_Lowercase: order_name.toLocaleLowerCase()});
 }
 
-module.exports = mongoose.model('Order_Moving', order_Moving_Schema, 'Order_Moving');
+module.exports = mongoose.model('order_User', order_User_Schema, 'order_User');

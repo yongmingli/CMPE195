@@ -11,20 +11,18 @@ var User = require('../models/user');
 var Account = require('../models/account');
 
 /* Routes */
-router.get('/', auth.isAuthenticated, function(req, res) {
-  Account.find({user_ID: req.user._id}, function(err, accounts){
-    // if(err){
-    //   console.log(err);
-    // }
-    (async function() {
-        const account = await Account.getAccount(accountId);
-        res.render('setting_business.pug', {account: account});  
-    
-      })().catch((err) => {
-        next(err);
-      });
-    // res.render('setting_business.pug', {error: req.flash('error')[0]});
-  })
+router.get('/:accountId', auth.isAuthenticated, auth.accountBelongsToUser, function(req, res, next) {
+  const accountId = req.params.accountId;
+  console.log(accountId); // For TESTING
+  
+  // Using a IIFE since it's cleaner than using a Promise chain & passing account to next in chain.
+  (async function() {
+    const account = await Account.getAccount(accountId);
+    console.log(account); // For TESTING
+    res.render('setting_business.pug', {account:account,accountId});  
+  })().catch((err) => {
+    next(err);
+  });
 });
 
 router.post('close-account', auth.isAuthenticated, function(req, res, next){
