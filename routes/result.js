@@ -27,7 +27,7 @@ router.get('/:city/:type', function(req, res) {
   // res.render('searchResult.html',results);  
 
   (async function() {
-  const results = await Account.get_Accounts_By_City(search_city);
+  const results = await Account.get_company(search_city,search_type);
   console.log(results); // TESTING
     res.render('result.pug',{results:results, isAuthenticated: isAuthenticated});  
 

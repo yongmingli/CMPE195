@@ -129,6 +129,11 @@ accountSchema.statics.getAccount = async function(account_ID) {
 accountSchema.statics.getAccounts = async function(user_ID) {
     return await this.find({user_ID: user_ID});
 }
+accountSchema.statics.get_company = async function(city, type) {
+    var city_lower = city.toLocaleLowerCase()
+    return await this.find({city_lowercase: city_lower, type:type});
+}
+
 accountSchema.statics.get_company_by_city = async function(city) {
     var city_lower = city.toLocaleLowerCase()
     return await this.find({city_lowercase: city_lower});
