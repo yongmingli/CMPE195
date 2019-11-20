@@ -25,7 +25,21 @@ router.get('/:accountId', auth.isAuthenticated, auth.accountBelongsToUser, funct
   });
 });
 
-router.post('close-account', auth.isAuthenticated, function(req, res, next){
+router.post(':accountId/change-address', auth.isAuthenticated, function(req, res, next){
+  const new_address = req.body['new_address'];
+  const new_city = req.body['new_city'];
+
+  (async function() {
+    // var acc = await Account.getAccount(closeAcc);
+    // await Account.close(acc._id);
+    return res.redirect(`/setting_business/${req.account._id}`);
+  })().then((res) => {
+  }).catch((err) => {
+    next(err);
+  })
+});
+
+router.post(':accountId:/close-account', auth.isAuthenticated, function(req, res, next){
     const closeAcc = req['body']['account-id'];
     (async function() {
       var acc = await Account.getAccount(closeAcc);

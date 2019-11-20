@@ -52,7 +52,7 @@ router.post('/', auth.isAuthenticated, function(req, res, next) {
     return account;
   })().then(account => {
     if (account != null)
-      res.redirect(`/bueiness/${account._id}`);
+      res.redirect(`/business/${account._id}`);
     else
       res.redirect('/auth_business');
   }).catch(err => next(err));

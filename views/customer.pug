@@ -42,7 +42,7 @@ nav.navbar.navbar-dark.fixed-top.bg-dark.flex-md-nowrap.p-0.shadow
               br
               a( class="btn btn-block" href='/') Back
               br
-          if !moving &&!cleaning
+          if !moving || !cleaning
             li.nav-item
                 br
                 a( class="btn btn-primary btn-block" href='/auth_business') Open your business account 

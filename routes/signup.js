@@ -37,9 +37,6 @@ router.post('/', function(req, res, next) {
       return res.redirect('signup');
     }
     
-    // Create a checking account for the new user
-    const checking = await Account.createChecking(user._id);
-    
     // User creation was successful, so we'll pass control to the auth middleware
     // to authenticate the new user.
     return next();

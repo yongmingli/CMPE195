@@ -145,7 +145,7 @@ html
                 a(class="btn btn-block" href=`/business/${accountId}`) Back to Business Dashboard
                 br
                 h5(class="text-center") Address change 
-                form(method="post" action='setting_business/change-address')
+                form(method="post" action=`${accountId}/change-address`)
                     div(class="text-center") #{error}
                     fieldset(class="form-group") 
                         p Your current address is:
@@ -161,7 +161,7 @@ html
                 br
                 br
                 h5(class="text-center") Close business account
-                form(method="post" action='setting_business/close-account')
+                form(method="post" action=`${accountId}/close-account`)
                     div(class="text-center") #{error}
                     fieldset(class="form-group") 
                     <input type="submit" class="btn btn-primary btn-block" value="Submit">
