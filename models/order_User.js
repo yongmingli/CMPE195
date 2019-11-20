@@ -86,6 +86,10 @@ order_User_Schema.statics.addOrder = async function(user_ID, account_ID, order_n
 order_User_Schema.statics.get_order_by_type_many = async function(order_type) {
     return await this.find({ordertype: order_type});
 }
+
+order_User_Schema.statics.get_order_by_id = async function(userID) {
+    return await this.find({user_ID: userID});
+}
 /**
  * Finds one order with a given order type.
  * @function get_order_by_type
