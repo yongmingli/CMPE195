@@ -15,7 +15,7 @@ router.get('/:accountId', auth.isAuthenticated, auth.accountBelongsToUser, funct
   (async function() {
     const account = await Account.getAccount(accountId);
     console.log(account); // For TESTING
-    res.render('business_x.pug', account);  
+    res.render('business.pug', account);  
   })().catch((err) => {
     next(err);
   });

@@ -1,7 +1,7 @@
 head
   meta(charset='utf-8')
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
-  title Customer
+  title Customer Dashboard
   meta(name='description' content='')
   meta(name='viewport' content='width=device-width, initial-scale=1')
   meta(name='robots' content='all,follow')
@@ -68,6 +68,8 @@ nav.navbar.navbar-dark.fixed-top.bg-dark.flex-md-nowrap.p-0.shadow
       section.py-5
       .container
         .d-flex.justify-content-between.align-items-end.mb-5
+          h1.hero-heading.mb-0 User Dashboard
+          br
           h1.hero-heading.mb-0 Your nearest orders
         .d-flex.justify-content-between.align-items-center.flex-column.flex-lg-row.mb-5
           .mr-3
@@ -250,18 +252,3 @@ nav.navbar.navbar-dark.fixed-top.bg-dark.flex-md-nowrap.p-0.shadow
                     span.text-primary.text-sm.text-uppercase
                       i.fa.fa-check.fa-fw.mr-2  
                       | Confirmed
-        // Pagination
-        nav(aria-label='Page navigation example')
-          ul.pagination.pagination-template.d-flex.justify-content-center
-            li.page-item
-              a.page-link(href='#')
-                i.fa.fa-angle-left
-            li.page-item.active
-              a.page-link(href='#') 1
-            li.page-item
-              a.page-link(href='#') 2
-            li.page-item
-              a.page-link(href='#') 3
-            li.page-item
-              a.page-link(href='#')
-                i.fa.fa-angle-right
