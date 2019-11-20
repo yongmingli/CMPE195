@@ -66,24 +66,24 @@ order_Moving_Schema.statics.createMovingOrder = async function(user_ID, account_
         company_Lowercase: order_company.toLocaleLowerCase(),
         ordername_Lowercase: order_name.toLocaleLowerCase(),
     });
-    const orderS = await newOrder.save();
-    const account = await Account.getAccount(account_ID);
-    if ((account.type !== 'Moving')){
-        responseObj.success = false;
-        responseObj.message = 'this account cannot create moving order';
-        return responseObj;
-    }
-    var order = await this.find({company: newOrder.company_Lowercase},{ordername:newOrder.ordername_Lowercase},{order_type:newOrder.ordertype});
-
-    if (order) {
-        responseObj.success = false;
-        responseObj.message = 'the order exist, you can edit it!';
-        return responseObj;
-    }else {
-        responseObj.success = true;
-        responseObj.message = 'the order is created';
-        await new order.save();
-    }
+    // const orderS = await newOrder.save();
+    // const account = await Account.getAccount(account_ID);
+    // if ((account.type !== 'Moving')){
+    //     responseObj.success = false;
+    //     responseObj.message = 'this account cannot create moving order';
+    //     return responseObj;
+    // }
+    // var order = await this.find({company: newOrder.company_Lowercase},{ordername:newOrder.ordername_Lowercase},{order_type:newOrder.ordertype});
+    //
+    // if (order) {
+    //     responseObj.success = false;
+    //     responseObj.message = 'the order exist, you can edit it!';
+    //     return responseObj;
+    // }else {
+    //     responseObj.success = true;
+    //     responseObj.message = 'the order is created';
+    //     await new order.save();
+    // }
     responseObj.success = true;
     return await newOrder.save();
 }

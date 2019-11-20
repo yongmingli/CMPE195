@@ -42,11 +42,11 @@
             <ul class="navbar-nav ml-auto">
               </li>
               {% if isAuthenticated %}
-              <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block"><a href="/customer" class="btn btn-primary">Dashboard</a></li>
-              <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block"><a href="/logout">Log out</a></li>
+              <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block"><a href="/customer" class="btn btn-primary btn-block">Dashboard</a></li>
+              <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block"><a href="/logout" class="btn btn-block">Log out</a></li>
               {% else %} 
-              <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block"><a href="/login" class="btn btn-primary">Log in</a></li>
-              <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block"><a href="/signup" class="btn btn-primary">Sign up</a></li>
+              <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block"><a href="/login" class="btn btn-primary btn-block">Log in</a></li>
+              <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block"><a href="/signup" class="btn btn-primary btn-block">Sign up</a></li>
               {% endif %}
             </ul>
           </div>
@@ -114,33 +114,6 @@
         </div>
       </div>
     </footer>
-
-
-    <!-- JavaScript files
-    <script>
-      // ------------------------------------------------------- //
-      //   Inject SVG Sprite - 
-      //   see more here 
-      //   https://css-tricks.com/ajaxing-svg-sprite/
-      // ------------------------------------------------------ //
-      function injectSvgSprite(path) {
-      
-          var ajax = new XMLHttpRequest();
-          ajax.open("GET", path, true);
-          ajax.send();
-          ajax.onload = function(e) {
-          var div = document.createElement("div");
-          div.className = 'd-none';
-          div.innerHTML = ajax.responseText;
-          document.body.insertBefore(div, document.body.childNodes[0]);
-          }
-      }    
-      // to avoid CORS issues when viewing using file:// protocol, using the demo URL for the SVG sprite
-      // use your own URL in production, please :)
-      // https://demo.bootstrapious.com/directory/1-0/icons/orion-svg-sprite.svg
-      //- injectSvgSprite('icons/orion-svg-sprite.svg'); 
-      injectSvgSprite('https://demo.bootstrapious.com/directory/1-1/icons/orion-svg-sprite.svg'); 
-    </script> -->
 
     <!-- jQuery-->
     <script src="vendor/jquery/jquery.min.js"></script>

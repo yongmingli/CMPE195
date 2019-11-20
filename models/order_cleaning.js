@@ -7,6 +7,7 @@
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 const Account = require('./account');
+const randomstring = require('randomstring');
 const ObjectID = require('mongodb').ObjectID;
 
 const SALTROUNDS = 10;
@@ -66,26 +67,25 @@ order_cleaning_Schema.statics.createCleaningOrder = async function(user_ID, acco
         company_Lowercase: order_company.toLocaleLowerCase(),
         ordername_Lowercase: order_name.toLocaleLowerCase(),
     });
-    const orderS = await newOrder.save();
     const account = await Account.getAccount(account_ID);
 
-    if ((account.type !== 'Cleaning')){
+    if ((account.type !== 'cleaning')){
         responseObj.success = false;
         responseObj.message = 'this account cannot create cleaining order';
         return responseObj;
     }
 
-    var order = await this.find({company: newOrder.company_Lowercase},{ordername:newOrder.ordername_Lowercase},{order_type:newOrder.ordertype});
-
-    if (order){
-        responseObj.success = false;
-        responseObj.message = 'the order exist, you can edit it!';
-        return responseObj;
-    }else {
-        responseObj.success = true;
-        responseObj.message = 'the order is created';
-        await new order.save();
-    }
+    // var order = await this.find({account_ID:account_ID,company_Lowercase: order_company.toLocaleLowerCase(),ordername_Lowercase:order_name.toLocaleLowerCase(),ordertype: order_type});
+    //
+    // if (order){
+    //     responseObj.success = false;
+    //     responseObj.message = 'the order exist, you can edit it!';
+    //     return responseObj;
+    // }else {
+    //     responseObj.success = true;
+    //     responseObj.message = 'the order is created';
+    //     await new order.save();
+    // }
     responseObj.success = true;
     return await newOrder.save();
 }

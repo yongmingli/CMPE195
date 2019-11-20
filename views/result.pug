@@ -13,13 +13,14 @@ head
 
 body
 
-	nav(class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top main-nav")
-		button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar")
-			span(class="navbar-toggler-icon")
-		div(class="mx-auto")
-			a(class="navbar-brand" href="/") CityService
-		div(class="collapse navbar-collapse" id="collapsibleNavbar")
-			ul(class="nav navbar-nav flex-fill justify-content-center")
+	<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+	<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/">CityService</a>
+		<ul class="navbar-nav px-3">
+			<li class="nav-item text-nowrap">
+				<a class="nav-link" href="/logout">Log out</a>
+			</li>
+		</ul>
+	</nav>
 		
 	br
 	<div class="container" style="margin-top:80px"></div>
@@ -57,6 +58,6 @@ body
 					else
 						h4(class="text-center") Sorry, no matching results
 						br
-						a(class="btn btn-block" href='/') Back
+					a(class="btn btn-block" href='/') Back
 							//- <br><br>
 							//- div(class="col-sm-2")
