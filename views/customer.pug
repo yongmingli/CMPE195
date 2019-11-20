@@ -63,27 +63,205 @@ nav.navbar.navbar-dark.fixed-top.bg-dark.flex-md-nowrap.p-0.shadow
           li.nav-item
           li.nav-item
           li.nav-item
+    
     main.col-md-9.ml-sm-auto.col-lg-10.px-4(role='main')
-      h2 Order History
-      .table-responsive
-        table.table.table-striped.table-sm
-          thead
-            tr
-              th #
-              th Header
-              th Header
-              th Header
-              th Header
-          tbody
-            tr
-              td 1,001
-              td Lorem
-              td ipsum
-              td dolor
-              td sit
-            tr
-              td 1,002
-              td amet
-              td consectetur
-              td adipiscing
-              td elit
+      section.py-5
+      .container
+        .d-flex.justify-content-between.align-items-end.mb-5
+          h1.hero-heading.mb-0 Your nearest orders
+        .d-flex.justify-content-between.align-items-center.flex-column.flex-lg-row.mb-5
+          .mr-3
+            p.mb-3.mb-lg-0
+              | You have 
+              strong 12 Orders
+              |  in your account
+          .text-center
+            select#form_sort.selectpicker.mr-3.mb-3.mb-lg-0(name='sort' data-style='btn-selectpicker' title='')
+              option(value='sortBy_0') Newest   
+              option(value='sortBy_1') Oldest   
+              option(value='sortBy_2') Paid   
+        .list-group.shadow.mb-5
+          a.list-group-item.list-group-item-action.p-4
+            .row
+              .col-lg-4.align-self-center.mb-4.mb-lg-0
+                .d-flex.align-items-center.mb-3
+                  h2.h5.mb-0 Meredith Goodwin
+                  img.avatar.avatar-sm.avatar-border-white.ml-3(src='img/avatar/avatar-0.jpg' alt='Jack London')
+                p.text-sm.text-muted Double Room
+                span.badge.badge-pill.p-2.badge-secondary-light February 16, 2019 - February 19, 2019
+              .col-lg-8
+                .row
+                  .col-6.col-md-4.col-lg-3.py-3.mb-3.mb-lg-0
+                    h6.label-heading Rate type
+                    p.text-sm.font-weight-bold Bed &amp; Breakfast
+                    h6.label-heading Nights 
+                    p.text-sm.font-weight-bold.mb-0 3
+                  .col-6.col-md-4.col-lg-3.py-3
+                    h6.label-heading Occupancy
+                    p.text-sm.font-weight-bold 1 pax
+                    h6.label-heading Charge
+                    p.text-sm.font-weight-bold.mb-0 $244.42
+                  .col-6.col-md-4.col-lg-3.py-3
+                    h6.label-heading Booked Date
+                    p.text-sm.font-weight-bold February 16, 2019                                        
+                    h6.label-heading Arrival Time
+                    p.text-sm.font-weight-bold.mb-0 Around 4 PM
+                  .col-12.col-lg-3.align-self-center
+                    span.text-primary.text-sm.text-uppercase.mr-4.mr-lg-0
+                      i.fa.fa-check.fa-fw.mr-2  
+                      | Booking paid
+                    br.d-none.d-lg-block
+                    span.text-primary.text-sm.text-uppercase
+                      i.fa.fa-check.fa-fw.mr-2  
+                      | Confirmed
+                    br.d-none.d-lg-block
+                    span.text-primary.text-sm.text-uppercase
+                      i.fa.fa-check.fa-fw.mr-2  
+                      | Cancel
+          a.list-group-item.list-group-item-action.p-4(href='user-booking-detail.html')
+            .row
+              .col-lg-4.align-self-center.mb-4.mb-lg-0
+                .d-flex.align-items-center.mb-3
+                  h2.h5.mb-0 Weeks Garrett
+                  img.avatar.avatar-sm.avatar-border-white.ml-3(src='img/avatar/avatar-1.jpg' alt='Jack London')
+                p.text-sm.text-muted Double Room
+                span.badge.badge-pill.p-2.badge-primary-light March 14, 2019 - March 17, 2019
+              .col-lg-8
+                .row
+                  .col-6.col-md-4.col-lg-3.py-3.mb-3.mb-lg-0
+                    h6.label-heading Rate type
+                    p.text-sm.font-weight-bold Bed &amp; Breakfast
+                    h6.label-heading Nights 
+                    p.text-sm.font-weight-bold.mb-0 3
+                  .col-6.col-md-4.col-lg-3.py-3
+                    h6.label-heading Occupancy
+                    p.text-sm.font-weight-bold 3 pax
+                    h6.label-heading Charge
+                    p.text-sm.font-weight-bold.mb-0 $495.73
+                  .col-6.col-md-4.col-lg-3.py-3
+                    h6.label-heading Booked Date
+                    p.text-sm.font-weight-bold March 14, 2019                                        
+                    h6.label-heading Arrival Time
+                    p.text-sm.font-weight-bold.mb-0 Around 4 PM
+                  .col-12.col-lg-3.align-self-center
+                    span.text-primary.text-sm.text-uppercase.mr-4.mr-lg-0
+                      i.fa.fa-check.fa-fw.mr-2  
+                      | Booking paid
+                    br.d-none.d-lg-block
+                    span.text-muted.text-sm.text-uppercase
+                      i.fa.fa-times.fa-fw.mr-2  
+                      | Confirmed
+          a.list-group-item.list-group-item-action.p-4(href='user-booking-detail.html')
+            .row
+              .col-lg-4.align-self-center.mb-4.mb-lg-0
+                .d-flex.align-items-center.mb-3
+                  h2.h5.mb-0 Fisher Bauer
+                  img.avatar.avatar-sm.avatar-border-white.ml-3(src='img/avatar/avatar-2.jpg' alt='Jack London')
+                p.text-sm.text-muted Double Room
+                span.badge.badge-pill.p-2.badge-danger-light March 10, 2019 - March 13, 2019
+              .col-lg-8
+                .row
+                  .col-6.col-md-4.col-lg-3.py-3.mb-3.mb-lg-0
+                    h6.label-heading Rate type
+                    p.text-sm.font-weight-bold Bed &amp; Breakfast
+                    h6.label-heading Nights 
+                    p.text-sm.font-weight-bold.mb-0 3
+                  .col-6.col-md-4.col-lg-3.py-3
+                    h6.label-heading Occupancy
+                    p.text-sm.font-weight-bold 2 pax
+                    h6.label-heading Charge
+                    p.text-sm.font-weight-bold.mb-0 $938.48
+                  .col-6.col-md-4.col-lg-3.py-3
+                    h6.label-heading Booked Date
+                    p.text-sm.font-weight-bold March 10, 2019                                        
+                    h6.label-heading Arrival Time
+                    p.text-sm.font-weight-bold.mb-0 Around 4 PM
+                  .col-12.col-lg-3.align-self-center
+                    span.text-primary.text-sm.text-uppercase.mr-4.mr-lg-0
+                      i.fa.fa-check.fa-fw.mr-2  
+                      | Booking paid
+                    br.d-none.d-lg-block
+                    span.text-primary.text-sm.text-uppercase
+                      i.fa.fa-check.fa-fw.mr-2  
+                      | Confirmed
+          a.list-group-item.list-group-item-action.p-4(href='user-booking-detail.html')
+            .row
+              .col-lg-4.align-self-center.mb-4.mb-lg-0
+                .d-flex.align-items-center.mb-3
+                  h2.h5.mb-0 Aguilar Webb
+                  img.avatar.avatar-sm.avatar-border-white.ml-3(src='img/avatar/avatar-3.jpg' alt='Jack London')
+                p.text-sm.text-muted Double Room
+                span.badge.badge-pill.p-2.badge-success-light April 09, 2019 - April 13, 2019
+              .col-lg-8
+                .row
+                  .col-6.col-md-4.col-lg-3.py-3.mb-3.mb-lg-0
+                    h6.label-heading Rate type
+                    p.text-sm.font-weight-bold Bed &amp; Breakfast
+                    h6.label-heading Nights 
+                    p.text-sm.font-weight-bold.mb-0 4
+                  .col-6.col-md-4.col-lg-3.py-3
+                    h6.label-heading Occupancy
+                    p.text-sm.font-weight-bold 3 pax
+                    h6.label-heading Charge
+                    p.text-sm.font-weight-bold.mb-0 $955.07
+                  .col-6.col-md-4.col-lg-3.py-3
+                    h6.label-heading Booked Date
+                    p.text-sm.font-weight-bold April 09, 2019                                        
+                    h6.label-heading Arrival Time
+                    p.text-sm.font-weight-bold.mb-0 Around 4 PM
+                  .col-12.col-lg-3.align-self-center
+                    span.text-primary.text-sm.text-uppercase.mr-4.mr-lg-0
+                      i.fa.fa-check.fa-fw.mr-2  
+                      | Booking paid
+                    br.d-none.d-lg-block
+                    span.text-muted.text-sm.text-uppercase
+                      i.fa.fa-times.fa-fw.mr-2  
+                      | Confirmed
+          a.list-group-item.list-group-item-action.p-4(href='user-booking-detail.html')
+            .row
+              .col-lg-4.align-self-center.mb-4.mb-lg-0
+                .d-flex.align-items-center.mb-3
+                  h2.h5.mb-0 Melton Simon
+                  img.avatar.avatar-sm.avatar-border-white.ml-3(src='img/avatar/avatar-4.jpg' alt='Jack London')
+                p.text-sm.text-muted Double Room
+                span.badge.badge-pill.p-2.badge-secondary-light March 24, 2019 - March 28, 2019
+              .col-lg-8
+                .row
+                  .col-6.col-md-4.col-lg-3.py-3.mb-3.mb-lg-0
+                    h6.label-heading Rate type
+                    p.text-sm.font-weight-bold Bed &amp; Breakfast
+                    h6.label-heading Nights 
+                    p.text-sm.font-weight-bold.mb-0 4
+                  .col-6.col-md-4.col-lg-3.py-3
+                    h6.label-heading Occupancy
+                    p.text-sm.font-weight-bold 3 pax
+                    h6.label-heading Charge
+                    p.text-sm.font-weight-bold.mb-0 $882.25
+                  .col-6.col-md-4.col-lg-3.py-3
+                    h6.label-heading Booked Date
+                    p.text-sm.font-weight-bold March 24, 2019                                        
+                    h6.label-heading Arrival Time
+                    p.text-sm.font-weight-bold.mb-0 Around 4 PM
+                  .col-12.col-lg-3.align-self-center
+                    span.text-primary.text-sm.text-uppercase.mr-4.mr-lg-0
+                      i.fa.fa-check.fa-fw.mr-2  
+                      | Booking paid
+                    br.d-none.d-lg-block
+                    span.text-primary.text-sm.text-uppercase
+                      i.fa.fa-check.fa-fw.mr-2  
+                      | Confirmed
+        // Pagination
+        nav(aria-label='Page navigation example')
+          ul.pagination.pagination-template.d-flex.justify-content-center
+            li.page-item
+              a.page-link(href='#')
+                i.fa.fa-angle-left
+            li.page-item.active
+              a.page-link(href='#') 1
+            li.page-item
+              a.page-link(href='#') 2
+            li.page-item
+              a.page-link(href='#') 3
+            li.page-item
+              a.page-link(href='#')
+                i.fa.fa-angle-right
