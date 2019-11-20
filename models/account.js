@@ -22,6 +22,7 @@ var accountSchema = mongoose.Schema({
     company_name: String,
     address: String,
     city: String,
+    city_lowercase: String,
     check_Bussiness : Boolean,
 });
 
@@ -130,13 +131,7 @@ accountSchema.statics.getAccounts = async function(user_ID) {
     return await this.find({user_ID: user_ID});
 }
 accountSchema.statics.get_company = async function(city, type) {
-    var city_lower = city.toLocaleLowerCase()
-    return await this.find({city_lowercase: city_lower, type:type});
-}
-
-accountSchema.statics.get_company_by_city = async function(city) {
-    var city_lower = city.toLocaleLowerCase()
-    return await this.find({city_lowercase: city_lower});
+    return await this.find({city_lowercase: city.toLocaleLowerCase(), type:type});
 }
 /**
  * Checks whether an account belongs to a user.

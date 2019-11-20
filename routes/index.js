@@ -22,6 +22,7 @@ router.use('/setting_business', require('./setting_business'));
 router.use('/auth_business', require('./auth_business'));
 router.use('/logout', require('./logout'));
 router.use('/result', require('./result'));
+router.use('/order', require('./order'));
 
 /* Routes */
 router.get('/', function(req, res, next) {
@@ -41,7 +42,7 @@ router.post('/', function(req, res, next){
   console.log('city:', city);
 
   if (city == null) {
-    req.flash('error', 'Cannot transfer to the same account');
+    req.flash('error', 'Error');
     return res.redirect('/');  
   }
   return res.redirect(`/result/${city}/${type}`);   

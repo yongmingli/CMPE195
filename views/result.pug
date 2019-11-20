@@ -2,7 +2,7 @@ doctype html
 html(lang="en")
 
 head
-	title Account
+	title Result
 	meta(charset="utf-8")
 	meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
 	link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css")
@@ -33,7 +33,7 @@ body
 			div(class="col-sm-8") 
 				br
 				div
-					if results
+					if results.length != 0
 						table(style="width:100%")
 							tr
 								th Type
@@ -50,11 +50,13 @@ body
 										td #{result.address}
 										if isAuthenticated 	
 											td 
-												a(href=`result/order/${result.type}/${result._id}/${result.company}` class="btn btn-primary") order
+												a(href=`/order/${result.type}/${result._id}/${result.company_name}` class="btn btn-primary") order
 										else 
 											td
 												a(href="/login" class="btn btn-primary") Please Login here
 					else
-						a Sorry, no matching results
+						h4(class="text-center") Sorry, no matching results
+						br
+						a(class="btn btn-block" href='/') Back
 							//- <br><br>
 							//- div(class="col-sm-2")
