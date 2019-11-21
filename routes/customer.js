@@ -41,18 +41,18 @@ var c_order = require('../models/order_User');
     // const size = my_orders.length; 
     // console.log('My order size is: ', size); // For TESTING
     // res.render('customer.pug', {services:services,my_orders:my_orders});
-    // res.render('customer.pug', services);
-    //
-    (async function() {
-      my_orders = c_order.get_order_by_id(userid); 
-      console.log('My order is: ', my_orders); // For TESTING
-      const size = my_orders.length; 
-      console.log('My order size is: ', size); // For TESTING
-      res.render('customer.pug', {services:services,my_orders:my_orders}); 
-    })().catch((err) => {
-      next(err);
-    });
-    //
+    res.render('customer.pug', services);
+    
+    // (async function() {
+    //   my_orders = c_order.get_order_by_id(userid); 
+    //   console.log('My order is: ', my_orders); // For TESTING
+    //   const size = my_orders.length; 
+    //   console.log('My order size is: ', size); // For TESTING
+    //   res.render('customer.pug', {services:services, my_orders:my_orders}); 
+    // })().catch((err) => {
+    //   next(err);
+    // });
+
   })
 });
  
