@@ -6,7 +6,7 @@
     "start": "node ./bin/project_start"
   },
   "dependencies": {
-    "bcrypt": "^3.0.2",
+    "bcrypt": "^5.0.0",
     "bluebird": "^3.7.1",
     "connect-flash": "^0.1.1",
     "consolidate": "^0.15.1",
